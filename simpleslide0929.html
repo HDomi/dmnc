@@ -1,0 +1,151 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!--bx슬라이드 제이쿼리-->
+    <script src="bxslider1/src/js/jquery.bxslider.js"></script>    
+	<style>
+		*{margin:0; padding:0;}
+		li{list-style:none;}
+		a{text-decoration: none; color:#333; display: block;}
+		.slide{
+			width:500px;
+			margin:0 auto;
+			margin-top:100px;
+			position:relative;
+		}
+		.slide > a{
+			position:absolute;
+			top:50%;
+			margin-top:-20px;  /*-(height/2)*/
+			width:20px;
+			height:40px;
+			background-color: #ccc;
+			font-size: 20px;
+			line-height: 40px;
+			text-align: center;
+		}
+		.slide > a.prev{
+			left:0;
+		}
+		.slide > a.next{
+			right:0;
+		}
+		.slide .photo{
+			position:relative;
+			overflow: hidden;
+			width:320px;
+			height:500px;
+			margin:0 auto;
+		}
+		.slide .photo ul{
+			position:relative;
+			width:700px;
+			left:-320px;
+		}
+		.slide .photo ul li{
+			float:left;
+			width:320px;
+			height:300px;
+			margin-top:100px;
+			text-align: center;
+			line-height: 300px;
+			font-size:30px;
+			z-index: 1;
+			position:relative;
+			transition:all 0.5s;
+			background-color: bisque;/*background-image넣으면 됨*/
+		}
+        .slide .photo ul li img{
+            width: 320px;
+            height: 320px;
+        }
+		.slide .photo ul li.active{
+			transform:scale(1.0, 1.0);
+			z-index: 10;
+		}
+        
+	</style>
+	<script>
+	$(document).ready(function(){
+		//이미지(li)의 인덱스 번호를 나타내는 변수
+		var num=0;
+		// 이미지(li)의 총 개수 구하는 변수
+		var total=$('.photo ul li').length;
+		//마지막 li를 첫번째 li의 왼쪽으로 이동
+		$('.photo ul li:last-child').prependTo('.photo ul');
+		//photo ul이 왼쪽으로 이동하는 함수 선언
+		
+		
+		function moveleft(){
+			//인덱스 번호 증가
+			num++;
+			//인덱스 번호가 나의 개수보다 크거나 같아지면 0으로 초기화
+			if(num>=total){num=0;}
+			$('.photo ul').stop().animate({
+				left:'-='+320
+			},function(){
+			$('.photo ul li:first-child').appendTo('.photo ul');
+			$('.photo ul').css('left',-320);
+		
+			});//animate
+			
+			$('.photo ul li').removeClass('active');
+			$('.photo ul li:nth-child(4)').addClass('active');
+			}
+		 //next버튼 클릭하면 moveleft함수 호출
+		$('.next').click(function(){
+			moveleft();
+		});
+		
+		
+		
+		//photo ul이 오른쪽으로 이동하는 함수 선언
+		function moveright(){
+			//인덱스 번호 감소
+			num--;
+			//인덱스 번호가 나의 개수보다 0보다 작아지면 li의 총 개수로 초기화
+			if(num<0){num=total-1;}
+			$('.photo ul').stop().animate({
+				left:'+='+320
+			},function(){
+			$('.photo ul li:last-child').prependTo('.photo ul');
+			$('.photo ul').css('left',-320);
+		
+			});
+			
+			
+			$('.photo ul li').removeClass('active');
+			$('.photo ul li:nth-child(2)').addClass('active');
+			}
+			
+		 //prev버튼 클릭하면 moveright함수 호출
+		$('.prev').click(function(){
+			moveright();
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="slide">
+		<a href="#" class="prev">&lt;</a>
+		<a href="#" class="next">&gt;</a>
+		<div class="photo">
+			<ul>
+				<li class="s1"><img src="img/1.png"></li>
+				<li class="s2">slide2</li>
+				<li class="s3">slide3</li>
+				<li class="s4">slide4</li>
+				<li class="s5">slide5</li>
+				<li class="s6">slide6</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

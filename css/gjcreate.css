@@ -1,0 +1,163 @@
+#top_ban{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    background: #2f3243;
+    text-align: center;
+}
+#top_ban a{
+    border: 2px solid transparent;
+    background-image: radial-gradient(circle at top left,#fd00da,#19d7f8);
+    background-origin: border-box;
+    background-clip: border-box, content-box;
+    border-radius: 50%;
+    margin-top: 25px;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    font-size: 90px;
+    line-height: 140px;
+    color: #fff;
+}
+#top_ban a .fa{
+    width: 150px;
+    height: 150px;
+}
+.samuy {
+    margin-left: 50px;
+}
+
+#main{
+    width: 100%;
+    height: 1600px;
+    background: #000;
+}
+.item_box{
+    width: 1500px;
+    height: 900px;
+    margin-top: 25px;
+    border-top: 1px solid #999;
+}
+.scroll_sec{
+    position: relative;
+    left: -35%;
+    top: 100px;
+    background: #999;
+    width: 345px;
+    height: 620px;
+    overflow: auto;
+    border: 1px solid #999;
+    
+}
+.search_box{
+    text-align: left;
+    position: relative;
+    left: -35%;
+    top: 90px;
+    background: #999;
+    width: 345px;
+    height: 42px;
+    border: 1px solid #999;
+    
+}
+input[type="text"] {
+    width: 150px;
+    left: 0;
+}
+#main p.pp{
+    background: blue;
+}
+#main h3{
+    display: inline-block;
+    margin-left: 250px;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #fff;
+}
+#main h2{
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 250px;
+    font-size: 30px;
+    color: #fff;
+}
+#main p.seol{
+    margin-left: 200px;
+    font-size: 12px;
+    color: #fff;
+}
+#main table{
+    text-align: center;
+    position: relative;
+    left: 14%;
+    top: -576px;
+    overflow: auto;
+}
+#main table td.item{
+    width: 150px;
+    height: 150px; 
+}
+#main table td a{
+    color: #fff;
+}
+#main table td a img{
+    width: 100px;
+    height: 100px;
+}
+#main table td.txt{
+    padding-left: 20px;
+    text-align: left;
+    width: 500px;
+    height: 100px;
+    color: #fff;
+}
+#main table td.txt span{
+    font-size: 12px;
+    color: #27aac9;
+}
+
+#main table td.sur{
+    width: 100px;
+    color: #fff;
+}
+#main table td.pay{
+    width: 150px;
+    color: #27aac9;
+}
+#main table tr.m_sub{
+    color: #fff;
+}
+
+
+
+.item_bot{
+    text-align: center;
+}
+.item_bot ul{
+    display: inline-block;
+    margin-top: 20px;
+}
+.item_bot ul li{
+    border: 2px solid transparent;
+    background-image: radial-gradient(circle at top left,#fd00da,#19d7f8);
+    background-origin: border-box;
+    background-clip: border-box, content-box;
+    border-radius: 20px;
+    display: inline-block;
+    line-height: 50px;
+    width: 250px;
+    height: 50px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.item_bot ul li a p {
+    width: 248px;
+    height: 48px;
+    background: #000;
+    line-height: 50px;
+    border-radius: 20px;
+} 
+.item_bot ul li a{
+    color: #fff;
+}

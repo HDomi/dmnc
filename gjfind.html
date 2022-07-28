@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>견적찾기</title>
+    <link rel="stylesheet" href="css/gjfind.css">
+    <link rel="stylesheet" href="css/top_bottom.css">
+    <link rel="stylesheet" href="css/login_modal.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/9ea928980d.js" crossorigin="anonymous"></script>
+    <script src="/js/prefixfree.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    
+    
+        <script>
+        $(function(){
+            
+            //전체 메뉴시작
+           /* $("header nav ul.gnb > li").hover(function(){
+                $("ul.sub").stop().slideDown();
+            }, function(){
+               $("ul.sub").stop().slideUp(); 
+            });*/
+            
+            $("header nav ul.gnb > li").hover(function(){
+                $(this).children("ul.sub").stop().slideDown();
+            }, function(){
+                $(this).children("ul.sub").stop().slideUp();
+            });
+            
+            
+        });/*끝*/
+    </script>
+    <script>
+    $(function() {
+        $(".sign_btn").click(function() {
+            $("#m_login").fadeIn();
+        });
+
+        $("#login p.button").click(function() {
+            $("#m_login").fadeOut();
+        });
+
+    });
+
+</script>
+   </head>
+<body>
+      <div id="m_login">
+        <div id="login">
+            <p class="button"><a href="#a">X</a></p>
+            <p class="first"><a href="#a">로그인 <span>회원가입</span></a></p>
+
+            <ul>
+                <li class="txt1">아이디 또는 이메일</li>
+                <li><input type="text"></li>
+                <li class="txt2">비밀번호</li>
+                <li><input type="password"></li>
+                <a href="#a">
+                    <li class="btn">로그인</li>
+                </a>
+            </ul>
+
+            <div id="search">
+                <p><a href="#a"><u>아이디찾기</u>&nbsp;&nbsp;&nbsp;&nbsp;<u>비밀번호 찾기</u></a></p>
+            </div>
+
+        </div>
+    </div>
+    <div id="container">
+        <header>
+            <a href="main.html"><img src="img/logo.png"></a>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="main.html">홈</a>
+                        <ul class="sub">
+                            <!--<li><a href="#a">서브메뉴1</a></li>
+                            <li><a href="#a">서브메뉴2</a></li>-->
+                        </ul><!--.sub-->
+                    </li>
+                    <li><a href="gjfind.html">견적찾기</a>
+                        <ul class="sub">
+                            <li><a href="#a">사무용</a></li>
+                            <li><a href="#a">게임용</a></li>
+                        </ul><!--.sub-->    
+                    </li>
+                    <li><a href="gjcreate.html">견적내기</a>
+                        <ul class="sub">
+                            <li><a href="#a">나의견적</a></li>
+                            <li><a href="#a">남의견적</a></li>
+                        </ul><!--.sub-->
+                    </li>
+                    <li><a href="offmap.html">오프라인 매장</a>
+                        <ul class="sub">
+                            <li><a href="#a">오시는 길</a></li>
+                        </ul><!--.sub-->
+                    </li>
+                </ul>    
+            </nav>
+            <a href="#a" class="sign_btn"><span>Login / Sign up</span></a>
+        </header>
+        <div id="top_line"><p class="top_line"></p></div>
+        <div id="top_ban">
+            <a href="#queue_1" class="gamey"><i class="fas fa-gamepad"></i></a>
+            <a href="#queue_3" class="samuy"><i class="fas fa-mail-bulk"></i></a>
+        </div>
+        <div id="main_banner">
+           <ul>
+           <li>
+            <p class="m_img"><img src="img/comp3.png"></p>
+            </li>
+            <li>
+               <table>
+                <tr>
+                    <td><a href="#queue_1"><i class="fas fa-gamepad"></i></a></td>
+                    <td><a href="#queue_3"><i class="fas fa-mail-bulk"></i></a></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="txt">CHOICE<br><span>PC line up</span></td>
+                </tr>
+            </table>
+            </li>
+            </ul>
+        </div>
+        <div id="categori">
+            <div id="queue_1">
+               <h2>◆ For Game.</h2>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp1.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>SWORD PC<br><span>i7-10세대10700K + RTX 3060 TI</span></li>
+                    <li>판매가 : 2,238,000원</li>
+                    <li>최적가 : 2,173,000원</li>
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp2.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>Cool PC<br><span>i7-10세대10700K + RTX 3070 TI</span></li>
+                    <li>판매가 : 2,630,000원</li>
+                    <li>최적가 : 2,554,000원</li>         
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp3.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>Mint PC<br><span>i7-10세대10700K + RTX 3060 TI</span></li>
+                    <li>판매가 : 2,739,000원</li>
+                    <li>최적가 : 2,661,000원</li>
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp4.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>Big PC<br><span>i7-10세대10700K + RTX 3070 TI</span></li>
+                    <li>판매가 : 2,982,000원</li>
+                    <li>최적가 : 2,896,000원</li>
+                </ul></a>
+            </div>
+            <div id="queue_2">
+               <h2>◆ For Game.</h2>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp1.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>SWORD PC<br><span>i7-10세대10400F + GTX 1660 TI</span></li>
+                    <li>판매가 : 2,238,000원</li>
+                    <li>최적가 : 2,173,000원</li>
+                </ul></a>
+               <a href="#a"> <ul class="ct">
+                    <li class="ca_pht"><img src="img/comp2.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>Cool PC<br><span>i7-10세대10700F + RTX 3060</span></li>
+                    <li>판매가 : 2,630,000원</li>
+                    <li>최적가 : 2,554,000원</li>         
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp3.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>Mint PC<br><span>i7-11세대11700K + RTX 3060 TI</span></li>
+                    <li>판매가 : 2,739,000원</li>
+                    <li>최적가 : 2,661,000원</li>
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/comp4.png"></li>
+                    <li><i class="fas fa-gamepad"></i></li>
+                    <li>Big PC<br><span>라이젠5-4세대 5600X + RTX 3070 TI</span></li>
+                    <li>판매가 : 2,982,000원</li>
+                    <li>최적가 : 2,896,000원</li>
+                </ul></a>            
+
+            </div>
+            <div id="queue_3">
+               <h2>◆ For Office.</h2>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu1.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>FOCUS PC<br><span>펜티엄 골드 G6405 + ?</span></li>
+                    <li>판매가 : 350,000원</li>
+                    <li>최적가 : 340,000원</li>
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu2.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>RAVEN PC<br><span>라이젠5-2세대 3400ㅎ + ?</span></li>
+                    <li>판매가 : 460,000원</li>
+                    <li>최적가 : 448,000원</li>         
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu3.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>SENSE PC<br><span>10세대 10400ㄹ + GT1030</span></li>
+                    <li>판매가 : 627,000원</li>
+                    <li>최적가 : 609,000원</li>
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu4.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>MILD PC<br><span>10세대 10400F + GTX1050 TI</span></li>
+                    <li>판매가 : 765,000원</li>
+                    <li>최적가 : 743,000원</li>
+                </ul></a>            
+
+            </div>
+            <div id="queue_4">
+                <h2>◆ For Office.</h2>
+                 <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu1.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>FOCUS PC<br><span>펜티엄 골드 G6405 + ?</span></li>
+                    <li>판매가 : 350,000원</li>
+                    <li>최적가 : 340,000원</li>
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu2.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>RAVEN PC<br><span>라이젠5-2세대 3400ㅎ + ?</span></li>
+                    <li>판매가 : 460,000원</li>
+                    <li>최적가 : 448,000원</li>         
+                </ul></a>
+                <a href="#a"><ul class="ct">
+                    <li class="ca_pht"><img src="img/samu3.png"></li>
+                    <li><i class="fas fa-mail-bulk"></i></li>
+                    <li>SENSE PC<br><span>10세대 10400ㄹ + GT1030</span></li>
+                    <li>판매가 : 627,000원</li>
+                    <li>최적가 : 609,000원</li>
+                </ul></a>
+            </div>
+        </div>
+       <div class="social_ic">
+            <ul>
+                <li><p class="line"></p></li>
+                <li><a href="#a"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#a"><i class="fa fa-github"></i></a></li>
+                <li><a href="#a"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div id="footer_02">
+        <div id="footer_copy">
+            <div class="copy_box">
+                <p><img src="img/logo.png"></p>
+            </div>
+            <div class="copy_box">
+                <p class="txt1">
+                    <a href="#a">
+                        <u>이용약관<br>
+                            <b>개인정보처리방침</b><br>
+                            그룹</u>
+                    </a>
+                </p>
+            </div>
+            <div class="copy_box">
+                <p class="txt2">주식회사 도미 대표이사 : 황재영 용인시 여기저기 저기여기 /<br>
+                    사업자등록번호 : 111-11-11111 / 통신판매업신고 : 2014-서울강남-39420/<br>
+                    개인정보관리 및 책임자 : 황재영 /<br>
+                    고객센터 : 1234-5678 /<br>
+                    고객님의 안전거래를 위해 현금결제시 한결은행과 채무지급보증계약을 체결하여 안전거래를 보장하고 있습니다.<br>
+                    <a href="#a"><u>서비스 가입사실 확인</u></a><br><br>
+
+                    Copyright&copy;hwang1139.cafe24.Com. All rights reserved.<br>사진출처 : OverSystem / https://oversystem.co.kr/</p>
+                    
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+</body>
+    
+</html>
